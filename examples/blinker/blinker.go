@@ -1,18 +1,16 @@
 /*
-
 A blinker example using go-rpio library.
 Requires administrator rights to run
 
 Toggles a LED on physical pin 19 (mcu pin 10)
 Connect a LED with resistor from pin 19 to ground.
-
 */
 
 package main
 
 import (
 	"fmt"
-	"github.com/stianeikeland/go-rpio"
+	"github.com/gonutz/gopio"
 	"os"
 	"time"
 )

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/stianeikeland/go-rpio"
+	"github.com/gonutz/gopio"
 	"os"
 )
 
