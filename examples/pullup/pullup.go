@@ -8,18 +8,18 @@ import (
 
 var (
 	// Use mcu pin 22, corresponds to GPIO3 on the pi
-	pin = rpio.Pin(22)
+	pin = gopio.Pin(22)
 )
 
 func main() {
 	// Open and map memory to access gpio, check for errors
-	if err := rpio.Open(); err != nil {
+	if err := gopio.Open(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
 	// Unmap gpio memory when done
-	defer rpio.Close()
+	defer gopio.Close()
 
 	// Pull up and read value
 	pin.PullUp()

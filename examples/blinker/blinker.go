@@ -17,18 +17,18 @@ import (
 
 var (
 	// Use mcu pin 10, corresponds to physical pin 19 on the pi
-	pin = rpio.Pin(10)
+	pin = gopio.Pin(10)
 )
 
 func main() {
 	// Open and map memory to access gpio, check for errors
-	if err := rpio.Open(); err != nil {
+	if err := gopio.Open(); err != nil {
 		fmt.Println(err)
 		os.Exit(1)
 	}
 
 	// Unmap gpio memory when done
-	defer rpio.Close()
+	defer gopio.Close()
 
 	// Set pin to output mode
 	pin.Output()
